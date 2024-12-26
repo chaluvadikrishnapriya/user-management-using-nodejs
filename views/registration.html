@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h1>this is Registration page</h1>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            height: 60px;
+            background: #18191a;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 22px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #Register {
+            padding: 100px 0;
+            background-color: #242526;
+            color: white;
+            text-align: center;
+        }
+
+        .contact_head {
+            font-size: 40px;
+            color: #44f8c5;
+            font-weight: 400;
+        }
+
+        .form {
+            margin-top: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form_group input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: white;
+        }
+
+        .form_btn {
+            padding: 10px 20px;
+            background-color: #44f8c5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer {
+            background: #18191a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 class="nav_head">BE FIT</h1>
+        <ul>
+            <li><a href="http://localhost:3000">Home</a></li>
+            <li><a href="http://localhost:3000/registration">Register</a></li>
+            <li><a href="http://localhost:3000/login">Login</a></li>
+        </ul>
+    </nav>
+
+    <section id="Register">
+        <h1 class="contact_head">Register <span>Here!</span></h1>
+        <div class="form">
+            <form action="/register" method="post">
+                <div class="contact">
+                    <div class="form_group">
+                        <input type="text" name="name" placeholder="Enter Full Name" required=""><br>
+                    </div>
+                    <div class="form_group">
+                        <input type="email" name="email" placeholder="Enter Email" required=""><br>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="form_group">
+                        <input type="number" name="mno" placeholder="Enter Mobile No." required=""><br>
+                    </div>
+                    <div class="form_group">
+                        <input type="text" name="esub" placeholder="Enter Email Subject" required=""><br>
+                    </div>
+                </div>
+                <div class="contact">
+                    <textarea name="sub" id="sub" placeholder="Enter Message" rows="8"></textarea>
+                </div>
+                <div style="text-align: left; margin-top: 20px; margin-left: 15%;">
+                    <button type="submit" class="form_btn">Register</button>
+                </div>
+            </form>
+            <p id="successMessage" style="color: #44f8c5; display: none; text-align: center; margin-top: 20px;">Registered successfully!</p>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+        });
+    </script>
+
+    <div class="footer">
+        <p> Copyright 2024 by code writer || All Rights Reserved....</p>
+    </div>
+</body>
+</html>
+</body>
+</html>
